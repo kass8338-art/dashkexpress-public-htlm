@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Dash K Express app icon">
+  <rect width="512" height="512" rx="96" fill="#0c7a63"/>
+  <path fill="#f27b35" d="M80 313h46l35-86h180l42 86h49v72h-41a55 55 0 0 1-109 0H204a55 55 0 0 1-109 0H80v-72Z"/>
+  <path fill="#ffffff" d="M169 158h135c36 0 66 29 66 66v89H133l36-155Z"/>
+  <path fill="#17201f" d="M181 194h56v38h-65l9-38Zm81 0h43c17 0 31 14 31 31v7h-74v-38ZM122 377a28 28 0 1 0 56 0 28 28 0 0 0-56 0Zm187 0a28 28 0 1 0 56 0 28 28 0 0 0-56 0Z"/>
+  <path fill="#ffffff" d="M124 118h60c62 0 107 39 107 101 0 63-45 103-108 103h-59V118Zm58 150c30 0 50-18 50-49 0-30-20-47-50-47h-1v96h1Zm122-150h54v78l61-78h61l-75 92 80 112h-64l-50-73-13 16v57h-54V118Z"/>
+</svg>

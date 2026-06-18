@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dash K Express | Moving & Delivery</title>
+    <meta name="description" content="Dash K Express moving and delivery booking app for dashkexpress.com. Experience a New Way of Moving. Contact kass@dashkexpress.com or 281-941-6279.">
+    <link rel="canonical" href="https://dashkexpress.com/">
+    <meta name="theme-color" content="#0c7a63">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Dash K Express">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.svg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#booking" aria-label="Dash K Express home">
+        <span class="brand-mark">DK</span>
+        <span>
+          <strong>Dash K Express</strong>
+          <small>Experience a New Way of Moving</small>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#booking">Book</a>
+        <a href="#services">Services</a>
+        <a href="#tracking">Track</a>
+        <a href="#agent">Agent</a>
+        <a href="#ops">Dispatch</a>
+        <a href="mailto:kass@dashkexpress.com">Email</a>
+      </nav>
+      <a class="call-button" href="https://dashkexpress.com/">dashkexpress.com</a>
+    </header>
+
+    <main>
+      <section class="hero" id="booking">
+        <div class="hero-copy">
+          <p class="eyebrow">Experience a New Way of Moving</p>
+          <h1>Book a truck and movers in minutes.</h1>
+          <p class="hero-text">Dash K Express helps customers schedule moving, delivery, labor, assembly, and removal with clear pricing, live job status, and a matched professional crew.</p>
+          <div class="hero-actions">
+            <button class="primary-action" data-scroll-target="quote-form">Start booking</button>
+            <button class="ghost-action" data-fill-demo>Use sample job</button>
+          </div>
+          <div class="app-install-card">
+            <span id="app-install-status">Mobile app ready</span>
+            <p>Install on Android or iPhone from your browser menu for quick access to booking, tracking, and dispatch.</p>
+            <button class="ghost-action compact" type="button" id="install-app-button" hidden>Install app</button>
+          </div>
+          <div class="hero-metrics" aria-label="Service confidence metrics">
+            <div><strong>Same-day</strong><span>availability</span></div>
+            <div><strong>Live ETA</strong><span>job tracking</span></div>
+            <div><strong>Upfront</strong><span>estimates</span></div>
+          </div>
+          <div class="service-strip" aria-label="Service highlights">
+            <span>Moving</span>
+            <span>Delivery</span>
+            <span>Labor help</span>
+            <span>Furniture delivery</span>
+            <span>Furniture assembly</span>
+            <span>Furniture & appliance removal</span>
+            <span>dashkexpress.com</span>
+            <span>kass@dashkexpress.com</span>
+            <span>281-941-6279</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Moving crew loading a delivery truck">
+          <div class="city-skyline"></div>
+          <div class="street"></div>
+          <div class="truck">
+            <div class="truck-box">
+              <span>DASH K</span>
+            </div>
+            <div class="truck-cab"></div>
+            <div class="wheel wheel-one"></div>
+            <div class="wheel wheel-two"></div>
+          </div>
+          <div class="box-stack">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="sofa"></div>
+          <div class="mover mover-one"></div>
+          <div class="mover mover-two"></div>
+        </div>
+      </section>
+
+      <section class="booking-grid" aria-label="Booking workspace">
+        <form class="booking-panel" id="quote-form">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Instant quote</p>
+              <h2>Tell us what is moving</h2>
+            </div>
+            <span class="status-pill">Live estimate</span>
+          </div>
+
+          <div class="field-row">
+            <label>
+              Pickup
+              <input name="pickup" type="text" placeholder="123 Main St" autocomplete="street-address">
+            </label>
+            <label>
+              Dropoff
+              <input name="dropoff" type="text" placeholder="456 Oak Ave" autocomplete="street-address">
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              Move date
+              <input name="date" type="date">
+            </label>
+            <label>
+              Arrival window
+              <select name="window">
+                <option>8:00 AM - 10:00 AM</option>
+                <option>10:00 AM - 12:00 PM</option>
+                <option>12:00 PM - 2:00 PM</option>
+                <option>2:00 PM - 4:00 PM</option>
+                <option>4:00 PM - 6:00 PM</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="segmented-control">
+            <legend>Service type</legend>
+            <label><input type="radio" name="service" value="delivery" checked><span>Delivery</span></label>
+            <label><input type="radio" name="service" value="small-move"><span>Small move</span></label>
+            <label><input type="radio" name="service" value="full-move"><span>Full move</span></label>
+          </fieldset>
+
+          <div class="field-row">
+            <label>
+              Item size
+              <select name="size">
+                <option value="single">Single item</option>
+                <option value="room">Studio or room</option>
+                <option value="apartment">Apartment</option>
+                <option value="home">Home</option>
+              </select>
+            </label>
+            <label>
+              Stairs
+              <input name="stairs" type="number" min="0" max="8" value="0">
+            </label>
+          </div>
+
+          <label>
+            Vehicle tier
+            <select name="vehicle">
+              <option value="lite">Lite - labor only</option>
+              <option value="pickup">Pickup - small item delivery</option>
+              <option value="van">Van - furniture delivery</option>
+              <option value="xl">XL - large items</option>
+              <option value="box">Box truck - apartment move</option>
+              <option value="boxPlus">Box+ - larger move</option>
+            </select>
+          </label>
+
+          <label class="range-label">
+            Estimated distance
+            <span><output id="distance-output">8</output> miles</span>
+            <input name="distance" type="range" min="1" max="60" value="8">
+          </label>
+
+          <div class="option-grid">
+            <label><input name="assembly" type="checkbox">Assembly help</label>
+            <label><input name="packing" type="checkbox">Packing supplies</label>
+            <label><input name="priority" type="checkbox">Priority dispatch</label>
+            <label><input name="protection" type="checkbox" checked>Damage protection</label>
+            <label><input name="labor" type="checkbox">Labor only</label>
+            <label><input name="removal" type="checkbox">Removal haul-away</label>
+          </div>
+
+          <label>
+            Notes for crew
+            <textarea name="notes" rows="3" placeholder="Gate code, elevator details, item count, parking notes"></textarea>
+          </label>
+        </form>
+
+        <aside class="estimate-panel" aria-live="polite">
+          <div class="estimate-card">
+            <p class="eyebrow">Estimated total</p>
+            <strong id="estimate-total">$118</strong>
+            <span id="estimate-detail">2 movers, 1 truck, about 70 minutes</span>
+          </div>
+          <dl class="price-breakdown">
+            <div><dt>Vehicle minimum</dt><dd id="base-price">$89</dd></div>
+            <div><dt>Time & labor</dt><dd id="labor-price">$0</dd></div>
+            <div><dt>Distance</dt><dd id="distance-price">$24</dd></div>
+            <div><dt>Add-ons</dt><dd id="addon-price">$5</dd></div>
+          </dl>
+          <p class="fine-print">Pricing uses a Lugg-style instant estimate model with vehicle tier, mileage, labor time, stairs, and selected add-ons.</p>
+          <button class="primary-action wide" id="book-button" type="button">Reserve crew</button>
+          <button class="ghost-action wide" id="save-draft-button" type="button">Save booking draft</button>
+          <p class="fine-print">Estimate updates as details change. Final price can adjust if the job scope changes on site.</p>
+        </aside>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">What we handle</p>
+            <h2>Moving help for homes, stores, and offices</h2>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <article>
+            <span>Move</span>
+            <h3>Moving</h3>
+            <p>Apartment, room-to-room, small business, and same-day moving help.</p>
+          </article>
+          <article>
+            <span>Drop</span>
+            <h3>Delivery</h3>
+            <p>Fast pickup and dropoff for marketplace, retail, and oversized items.</p>
+          </article>
+          <article>
+            <span>Lift</span>
+            <h3>Labor</h3>
+            <p>Load, unload, rearrange, stage, and heavy-lift support without a truck.</p>
+          </article>
+          <article>
+            <span>Sofa</span>
+            <h3>Furniture delivery</h3>
+            <p>Sofas, beds, tables, dressers, office furniture, and store purchases.</p>
+          </article>
+          <article>
+            <span>Build</span>
+            <h3>Furniture assembly</h3>
+            <p>Assembly support after delivery so items are placed and ready to use.</p>
+          </article>
+          <article>
+            <span>Haul</span>
+            <h3>Furniture & appliance removal</h3>
+            <p>Haul-away for old furniture, appliances, bulky items, and cleanouts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="service-areas" id="service-areas">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Service areas</p>
+            <h2>Available in Texas and New York</h2>
+          </div>
+        </div>
+
+        <div class="area-grid">
+          <article>
+            <span>TX</span>
+            <h3>Texas</h3>
+            <p>Moving, delivery, labor help, furniture assembly, and furniture or appliance removal across supported Texas service zones.</p>
+          </article>
+          <article>
+            <span>NY</span>
+            <h3>New York</h3>
+            <p>On-demand moving and delivery support for New York customers, including furniture delivery, assembly, labor, and removal.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="agent-console" id="agent" aria-label="Automation agent">
+        <div class="agent-copy">
+          <p class="eyebrow">Automation agent</p>
+          <h2>Let the dispatch agent run the site</h2>
+          <p>The agent can fill a realistic move request, calculate the quote, reserve a crew, assign dispatch, advance live tracking, and update the operations board.</p>
+        </div>
+
+        <div class="agent-panel">
+          <div class="agent-toolbar">
+            <button class="primary-action" type="button" data-agent-run>Run agent</button>
+            <button class="ghost-action" type="button" data-agent-pause>Pause</button>
+            <button class="ghost-action" type="button" data-agent-reset>Reset</button>
+          </div>
+
+          <div class="agent-status-card">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <div>
+              <strong id="agent-status">Standing by</strong>
+              <p id="agent-detail">Ready to automate a Dash K Express booking.</p>
+            </div>
+          </div>
+
+          <ol class="agent-steps" id="agent-steps">
+            <li data-step="quote"><span></span>Fill customer request</li>
+            <li data-step="estimate"><span></span>Calculate quote</li>
+            <li data-step="reserve"><span></span>Reserve crew</li>
+            <li data-step="dispatch"><span></span>Assign nearest truck</li>
+            <li data-step="track"><span></span>Advance tracking</li>
+            <li data-step="ops"><span></span>Update dispatch board</li>
+          </ol>
+
+          <div class="agent-log" id="agent-log" aria-live="polite">
+            <p>Agent log will appear here.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard" id="tracking">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Customer app</p>
+            <h2>Every job has a clear path</h2>
+          </div>
+          <button class="ghost-action compact" data-advance-status>Advance status</button>
+        </div>
+
+        <div class="tracking-layout">
+          <div class="phone-shell">
+            <div class="phone-screen">
+              <div class="map-panel">
+                <span class="route-dot pickup-dot"></span>
+                <span class="route-line"></span>
+                <span class="route-dot dropoff-dot"></span>
+                <span class="van-marker"></span>
+              </div>
+              <div class="job-card">
+                <span class="status-pill" id="mobile-status">Crew assigned</span>
+                <h3>West Loop sofa delivery</h3>
+                <p id="mobile-detail">Marco and Jalen arrive in 28 minutes.</p>
+                <div class="crew-mini">
+                  <span>MJ</span>
+                  <span>JL</span>
+                  <small>4.9 crew rating</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ol class="timeline" id="timeline">
+            <li class="done"><span></span><strong>Booked</strong><p>Customer confirmed quote and arrival window.</p></li>
+            <li class="done"><span></span><strong>Crew assigned</strong><p>Two movers and a box truck matched to the job.</p></li>
+            <li><span></span><strong>En route</strong><p>Live ETA and route share with the customer.</p></li>
+            <li><span></span><strong>Loading</strong><p>Photos and scope changes can be logged in the app.</p></li>
+            <li><span></span><strong>Complete</strong><p>Customer signs, tips, rates, and receives a receipt.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="crews" id="teams">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Crew marketplace</p>
+            <h2>Match the right truck to the right job</h2>
+          </div>
+        </div>
+        <div class="crew-grid">
+          <article class="crew-card active" data-crew="marco">
+            <span class="avatar">MR</span>
+            <div>
+              <h3>Marco Rivera</h3>
+              <p>Box truck, dolly, straps</p>
+            </div>
+            <strong>12 min</strong>
+          </article>
+          <article class="crew-card" data-crew="tasha">
+            <span class="avatar">TP</span>
+            <div>
+              <h3>Tasha Price</h3>
+              <p>Cargo van, furniture pads</p>
+            </div>
+            <strong>18 min</strong>
+          </article>
+          <article class="crew-card" data-crew="noah">
+            <span class="avatar">NO</span>
+            <div>
+              <h3>Noah Ortiz</h3>
+              <p>Pickup truck, appliance dolly</p>
+            </div>
+            <strong>24 min</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="ops-board" id="ops">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Dispatch console</p>
+            <h2>Today at a glance</h2>
+          </div>
+          <div class="ops-tabs" role="tablist" aria-label="Dispatch filters">
+            <button class="active" type="button">Active</button>
+            <button type="button">Quoted</button>
+            <button type="button">Completed</button>
+          </div>
+        </div>
+
+        <div class="ops-columns">
+          <article data-job-card="quoted">
+            <span>8:30 AM</span>
+            <h3>Marketplace dresser pickup</h3>
+            <p>1 mover, cargo van, 6 miles</p>
+            <meter min="0" max="100" value="35"></meter>
+          </article>
+          <article data-job-card="active">
+            <span>10:00 AM</span>
+            <h3>Apartment mini move</h3>
+            <p>2 movers, box truck, elevator reserved</p>
+            <meter min="0" max="100" value="62"></meter>
+          </article>
+          <article data-job-card="assigned">
+            <span>1:00 PM</span>
+            <h3>Retail sofa delivery</h3>
+            <p>2 movers, protection plan, assembly</p>
+            <meter min="0" max="100" value="15"></meter>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>Dash K Express</strong>
+      <span>dashkexpress.com | kass@dashkexpress.com | 281-941-6279 | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></span>
+    </footer>
+
+    <nav class="mobile-tabbar" aria-label="Mobile app navigation">
+      <a href="#booking"><span>Book</span></a>
+      <a href="#services"><span>Services</span></a>
+      <a href="#tracking"><span>Track</span></a>
+      <a href="#agent"><span>Agent</span></a>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>

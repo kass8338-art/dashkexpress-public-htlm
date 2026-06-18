@@ -1,0 +1,40 @@
+{
+  "name": "Dash K Express",
+  "short_name": "Dash K",
+  "description": "Moving, delivery, labor, furniture assembly, and removal booking app.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbfcfa",
+  "theme_color": "#0c7a63",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book a Move",
+      "short_name": "Book",
+      "description": "Start a Dash K Express moving or delivery request.",
+      "url": "/#booking"
+    },
+    {
+      "name": "Run Dispatch Agent",
+      "short_name": "Agent",
+      "description": "Open the automation agent.",
+      "url": "/#agent"
+    }
+  ]
+}
