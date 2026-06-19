@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dashkexpress.com/sitemap.xml
+Sitemap: https://www.dashkexpress.com/sitemap.xml
