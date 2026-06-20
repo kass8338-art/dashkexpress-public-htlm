@@ -1,11 +1,13 @@
-const CACHE_NAME = "dash-k-express-v3";
+const CACHE_NAME = "dash-k-express-v6";
 const APP_SHELL = [
   "/",
   "/index.html",
   "/privacy.html",
   "/terms.html",
+  "/hr.html",
   "/styles.css",
   "/app.js",
+  "/hr.js",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/apple-touch-icon.svg"

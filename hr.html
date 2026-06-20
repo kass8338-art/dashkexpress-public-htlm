@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dash K Express | HR Recruiting</title>
+    <meta name="description" content="Dash K Express internal HR recruiting and crew onboarding app.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0c7a63">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="internal-page">
+    <header class="topbar">
+      <a class="brand" href="index.html#booking" aria-label="Dash K Express home">
+        <span class="brand-mark">DK</span>
+        <span>
+          <strong>Dash K Express</strong>
+          <small>Internal recruiting console</small>
+        </span>
+      </a>
+      <nav aria-label="Internal">
+        <a href="index.html#booking">Client site</a>
+        <a href="#recruiting">Recruiting</a>
+        <a href="#crew-application-form">Applicant</a>
+        <a href="mailto:kass@dashkexpress.com">Email HR</a>
+      </nav>
+      <a class="call-button" href="https://www.dashkexpress.com/">Public site</a>
+    </header>
+
+    <main>
+      <section class="hr-login" id="hr-login" aria-labelledby="hr-login-title">
+        <form class="hr-login-card" id="hr-login-form">
+          <p class="eyebrow">Private HR access</p>
+          <h1 id="hr-login-title">Crew recruiting console</h1>
+          <p>Enter the internal access code before opening applicant screening, background check prep, document review, and payment onboarding.</p>
+          <label>
+            Access code
+            <input name="accessCode" type="password" inputmode="text" autocomplete="current-password" placeholder="Enter HR code">
+          </label>
+          <button class="primary-action wide" type="submit">Unlock HR console</button>
+          <p class="fine-print" id="hr-login-message" aria-live="polite">Private screen only. Add server-side authentication before storing real applicant data.</p>
+        </form>
+      </section>
+
+      <section class="recruiting standalone is-locked" id="recruiting" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">HR agent</p>
+            <h1>Recruit drivers and moving crews.</h1>
+            <p class="hero-text">A private operations workspace for screening applicants, preparing background checks, collecting documents, setting up payouts, and activating approved crews for dispatch.</p>
+          </div>
+          <button class="primary-action compact" type="button" data-hr-run>Run HR agent</button>
+        </div>
+
+        <div class="hr-layout">
+          <form class="hr-panel" id="crew-application-form">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Crew application</p>
+                <h3>Applicant intake</h3>
+              </div>
+              <span class="status-pill" id="hr-status">Ready to screen</span>
+            </div>
+
+            <div class="field-row">
+              <label>
+                Full name
+                <input name="applicantName" type="text" value="Jordan Hayes" autocomplete="name">
+              </label>
+              <label>
+                Phone
+                <input name="applicantPhone" type="tel" value="281 555 0198" autocomplete="tel">
+              </label>
+            </div>
+
+            <div class="field-row">
+              <label>
+                Role
+                <select name="role">
+                  <option>Driver + mover</option>
+                  <option>Moving crew</option>
+                  <option>Furniture assembly tech</option>
+                  <option>Removal specialist</option>
+                </select>
+              </label>
+              <label>
+                Market
+                <select name="market">
+                  <option>Texas</option>
+                  <option>New York</option>
+                  <option>Texas and New York</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="option-grid">
+              <label><input name="license" type="checkbox" checked>Valid driver license</label>
+              <label><input name="vehicleAccess" type="checkbox" checked>Truck or van access</label>
+              <label><input name="lifting" type="checkbox" checked>Heavy-lift capable</label>
+              <label><input name="assemblySkills" type="checkbox">Assembly experience</label>
+              <label><input name="insurance" type="checkbox">Commercial insurance</label>
+              <label><input name="weekends" type="checkbox" checked>Weekend availability</label>
+            </div>
+
+            <label>
+              Screening notes
+              <textarea name="screeningNotes" rows="3">Two years moving experience, clean customer service record, available same-day dispatch.</textarea>
+            </label>
+
+            <button class="primary-action wide" type="button" data-hr-email>Send application by email</button>
+            <p class="fine-print">This opens your email app with the applicant summary. Do not include sensitive documents by email.</p>
+          </form>
+
+          <div class="hr-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Onboarding pipeline</p>
+                <h3>Compliance and pay setup</h3>
+              </div>
+            </div>
+
+            <ol class="hr-steps" id="hr-steps">
+              <li data-hr-step="application"><span></span><strong>Application</strong><p>Collect role, location, vehicle, and availability.</p></li>
+              <li data-hr-step="screen"><span></span><strong>Screening</strong><p>Review experience, equipment, and service fit.</p></li>
+              <li data-hr-step="background"><span></span><strong>Background check</strong><p>Send consent-based check through an approved provider.</p></li>
+              <li data-hr-step="documents"><span></span><strong>Documents</strong><p>Collect license, insurance, tax, and work authorization documents.</p></li>
+              <li data-hr-step="payment"><span></span><strong>Payment setup</strong><p>Connect bank payout, ACH, or contractor payment profile.</p></li>
+              <li data-hr-step="active"><span></span><strong>Ready for dispatch</strong><p>Activate the crew member for job matching.</p></li>
+            </ol>
+
+            <div class="hr-actions">
+              <button class="ghost-action compact" type="button" data-hr-reset>Reset</button>
+              <a class="ghost-action compact" href="mailto:kass@dashkexpress.com?subject=Dash%20K%20Express%20crew%20application">Email HR</a>
+            </div>
+          </div>
+
+          <aside class="hr-summary" aria-live="polite">
+            <p class="eyebrow">Next task</p>
+            <strong id="hr-next-task">Review application</strong>
+            <p id="hr-detail">The HR agent is ready to qualify a driver or crew applicant.</p>
+            <dl class="price-breakdown">
+              <div><dt>Applicant</dt><dd id="hr-applicant">Jordan Hayes</dd></div>
+              <div><dt>Role</dt><dd id="hr-role">Driver + mover</dd></div>
+              <div><dt>Market</dt><dd id="hr-market">Texas</dd></div>
+            </dl>
+            <p class="fine-print">Background checks, tax forms, and payouts require applicant consent and secure third-party integrations before real use.</p>
+          </aside>
+        </div>
+
+        <section class="payment-onboarding" id="payment-onboarding">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Payment onboarding</p>
+              <h2>Set up driver and crew payouts safely</h2>
+            </div>
+          </div>
+          <div class="service-grid">
+            <article>
+              <span>1</span>
+              <h3>Verify applicant approval</h3>
+              <p>Approve the applicant only after screening, consent-based background check, document review, and market readiness are complete.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>Collect tax and payout profile</h3>
+              <p>Use a secure payout provider for W-9, business name, bank account, debit card, or contractor profile details.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>Confirm payment policy</h3>
+              <p>Document job pay, tips, adjustments, cancellation fees, damage claims, payout timing, and support contact before activation.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <strong>Dash K Express HR</strong>
+      <span>Internal recruiting console | kass@dashkexpress.com | 281 941 6279</span>
+    </footer>
+
+    <script src="hr.js"></script>
+  </body>
+</html>
