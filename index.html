@@ -3,431 +3,866 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dash K Express | Moving & Delivery</title>
-    <meta name="description" content="Dash K Express moving and delivery booking app for www.dashkexpress.com. Experience a New Way of Moving. Contact kass@dashkexpress.com or 281 941 6279.">
+    <title>MovingOS AI | The AI operating system for moving companies</title>
+    <meta name="description" content="MovingOS AI is the beachhead product for ServiceOS AI: AI quotes, scheduling, receptionist, CRM, payments, reviews, claims, and market intelligence for moving operators.">
     <link rel="canonical" href="https://www.dashkexpress.com/">
-    <meta name="theme-color" content="#0c7a63">
+    <meta name="theme-color" content="#111827">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Dash K Express">
+    <meta name="apple-mobile-web-app-title" content="MovingOS AI">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=8">
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#booking" aria-label="Dash K Express home">
-        <span class="brand-mark">DK</span>
+      <a class="brand" href="#product" aria-label="MovingOS AI home">
+        <span class="brand-mark">MO</span>
         <span>
-          <strong>Dash K Express</strong>
-          <small>Experience a New Way of Moving</small>
+          <strong>MovingOS AI</strong>
+          <small>Beachhead for ServiceOS AI</small>
         </span>
       </a>
       <nav aria-label="Primary">
-        <a href="#booking">Book</a>
-        <a href="#services">Services</a>
-        <a href="#tracking">Track</a>
-        <a href="#agent">Agent</a>
-        <a href="#ops">Dispatch</a>
-        <a href="mailto:kass@dashkexpress.com">Email</a>
+        <a href="#product">Product</a>
+        <a href="#vision">Vision</a>
+        <a href="#sbin">SBIN</a>
+        <a href="#faso">FasoOS</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#suite">Suite</a>
+        <a href="#flywheel">Flywheel</a>
+        <a href="#growth">Growth</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#launch">Launch</a>
+        <a href="#platform">Platform</a>
       </nav>
-      <a class="call-button" href="https://www.dashkexpress.com/">www.dashkexpress.com</a>
+      <a class="call-button" href="mailto:kass@dashkexpress.com">Start pilot</a>
     </header>
 
     <main>
-      <section class="hero" id="booking">
+      <section class="hero" id="product">
         <div class="hero-copy">
-          <p class="eyebrow">Experience a New Way of Moving</p>
-          <h1>Book a truck and movers in minutes.</h1>
-          <p class="hero-text">Dash K Express helps customers schedule moving, delivery, labor, assembly, and removal with clear pricing, live job status, and a matched professional crew.</p>
+          <p class="eyebrow">MovingOS first. ServiceOS later.</p>
+          <h1>The AI operating system for moving companies.</h1>
+          <p class="hero-text">Launch publicly as MovingOS AI: run your moving company without an office manager. Underneath, build the Service Business Intelligence Network that compounds into ServiceOS A and the FasoOS trade infrastructure path: registration, workflow, marketplace, capital, and autonomy.</p>
           <div class="hero-actions">
-            <button class="primary-action" data-scroll-target="quote-form">Start booking</button>
-            <button class="ghost-action" data-fill-demo>Use sample job</button>
+            <button class="primary-action" type="button" data-scroll-target="dispatcher-demo">Try quote builder</button>
+            <button class="ghost-action" type="button" data-fill-demo>Load operator scenario</button>
           </div>
-          <div class="app-install-card">
-            <span id="app-install-status">Mobile app ready</span>
-            <p>Install on Android or iPhone from your browser menu for quick access to booking, tracking, and dispatch.</p>
-            <button class="ghost-action compact" type="button" id="install-app-button" hidden>Install app</button>
-          </div>
-          <div class="hero-metrics" aria-label="Service confidence metrics">
-            <div><strong>Same-day</strong><span>availability</span></div>
-            <div><strong>Live ETA</strong><span>job tracking</span></div>
-            <div><strong>Upfront</strong><span>estimates</span></div>
-          </div>
-          <div class="service-strip" aria-label="Service highlights">
-            <span>Moving</span>
-            <span>Delivery</span>
-            <span>Labor help</span>
-            <span>Furniture delivery</span>
-            <span>Furniture assembly</span>
-            <span>Furniture & appliance removal</span>
-            <span>www.dashkexpress.com</span>
-            <span>kass@dashkexpress.com</span>
-            <span>281 941 6279</span>
+          <div class="hero-metrics" aria-label="Company targets">
+            <div><strong>84</strong><span>Pro customers to $1M ARR</span></div>
+            <div><strong>$99-$999</strong><span>Subscription ladder</span></div>
+            <div><strong>6x</strong><span>Content asset multiplier</span></div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Moving crew loading a delivery truck">
-          <div class="city-skyline"></div>
-          <div class="street"></div>
-          <div class="truck">
-            <div class="truck-box">
-              <span>DASH K</span>
-            </div>
-            <div class="truck-cab"></div>
-            <div class="wheel wheel-one"></div>
-            <div class="wheel wheel-two"></div>
+        <div class="command-center" aria-label="MovingOS product dashboard preview">
+          <div class="window-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>MovingOS Command Center</strong>
           </div>
-          <div class="box-stack">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="dashboard-grid">
+            <article class="metric-tile">
+              <span>New lead</span>
+              <strong>2 bed apartment</strong>
+              <p>Pickup, dropoff, inventory, stairs, and elevator notes captured.</p>
+            </article>
+            <article class="metric-tile accent">
+              <span>AI quote builder</span>
+              <strong>$642</strong>
+              <p>Pricing recommendation, contract, and payment link generated.</p>
+            </article>
+            <article class="workflow-card">
+              <span class="status-dot"></span>
+              <div>
+                <strong>Receptionist online</strong>
+                <p>Pricing, availability, and service-area questions answered 24/7.</p>
+              </div>
+            </article>
+            <article class="workflow-card">
+              <span class="status-dot orange"></span>
+              <div>
+                <strong>Market data captured</strong>
+                <p>Quote, demand, and service-cost signals added to intelligence layer.</p>
+              </div>
+            </article>
           </div>
-          <div class="sofa"></div>
-          <div class="mover mover-one"></div>
-          <div class="mover mover-two"></div>
+          <div class="pipeline">
+            <span style="width: 24%"></span>
+            <span style="width: 42%"></span>
+            <span style="width: 68%"></span>
+            <span style="width: 86%"></span>
+          </div>
         </div>
       </section>
 
-      <section class="booking-grid" aria-label="Booking workspace">
+      <section class="market-strip" aria-label="Expansion path">
+        <span>MovingOS AI</span>
+        <span>DeliveryOS AI</span>
+        <span>JunkOS AI</span>
+        <span>CleanOS AI</span>
+        <span>HandymanOS AI</span>
+        <span>ServiceOS AI</span>
+        <span>FasoOS</span>
+      </section>
+
+      <section class="master-vision" id="vision">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Master vision</p>
+            <h2>The Shopify of local service businesses</h2>
+          </div>
+        </div>
+
+        <div class="vision-hero">
+          <div>
+            <h3>Phone. Truck. Tools. ServiceOS.</h3>
+            <p>Every small service company starts with the basics. The category-defining move is making ServiceOS feel like the fourth requirement: the operating layer that runs CRM, quotes, invoices, scheduling, payments, reviews, messaging, customer support, and eventually demand and capital.</p>
+          </div>
+          <div class="requirement-stack" aria-label="Service business requirements">
+            <span>Phone</span>
+            <span>Truck</span>
+            <span>Tools</span>
+            <strong>ServiceOS</strong>
+          </div>
+        </div>
+
+        <div class="empire-grid">
+          <article>
+            <span>Layer 1</span>
+            <h3>Operating System</h3>
+            <p>The visible product: CRM, quotes, invoices, scheduling, payments, reviews, and messaging. Monthly subscription revenue builds the first $1M-$10M ARR foundation.</p>
+          </article>
+          <article>
+            <span>Layer 2</span>
+            <h3>Marketplace</h3>
+            <p>ServiceOS knows which companies are busy, which need jobs, which zip codes are hot, and which providers have high ratings. ServiceOS Leads matches customers to providers and takes a fee.</p>
+          </article>
+          <article>
+            <span>Layer 3</span>
+            <h3>Financial Services</h3>
+            <p>Once ServiceOS processes jobs, invoices, revenue, and payments, it can underwrite equipment loans, cash advances, truck financing, and other capital products.</p>
+          </article>
+        </div>
+
+        <div class="founder-story">
+          <div>
+            <p class="eyebrow">Founder story</p>
+            <h3>From moving operator to infrastructure founder</h3>
+            <p>A moving company owner got tired of paperwork, customer follow-ups, claims, pricing confusion, and administrative work. He built an AI office manager for movers. Operators adopted it. The platform expanded into every local service business and became the operating system powering small-business America.</p>
+          </div>
+          <div class="domain-edge">
+            <span>Wrong job classifications</span>
+            <span>Customer disputes</span>
+            <span>Damage claims</span>
+            <span>Crew issues</span>
+            <span>Gas reimbursement</span>
+            <span>Scheduling headaches</span>
+          </div>
+        </div>
+
+        <div class="agent-company">
+          <div class="agent-ceo">
+            <p class="eyebrow">AI workforce</p>
+            <h3>The owner becomes CEO</h3>
+            <p>The customer feels like they hired five employees. In reality, they subscribed to a system of AI workers that handle the busywork and surface decisions.</p>
+          </div>
+          <div class="agent-grid" aria-label="ServiceOS AI agents">
+            <article><span>Sales Agent</span><p>Outbound emails, lead qualification, and demo scheduling.</p></article>
+            <article><span>Estimator Agent</span><p>Quotes, job pricing, and upsell recommendations.</p></article>
+            <article><span>Dispatcher Agent</span><p>Scheduling, crew assignment, and route optimization.</p></article>
+            <article><span>Billing Agent</span><p>Invoices, reminders, and payment tracking.</p></article>
+            <article><span>Customer Success Agent</span><p>Questions, issue resolution, and review requests.</p></article>
+            <article><span>Analytics Agent</span><p>Forecasts, customer insights, and profitability analysis.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sbin-section" id="sbin">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Service Business Intelligence Network</p>
+            <h2>The system gets stronger every time someone uses it</h2>
+          </div>
+        </div>
+
+        <div class="sbin-flow" aria-label="ServiceOS compounding architecture">
+          <span>Customer</span>
+          <span>Workflow</span>
+          <span>Data</span>
+          <span>Intelligence</span>
+          <span>Automation</span>
+          <span>Marketplace</span>
+          <span>Financial Network</span>
+        </div>
+
+        <div class="sbin-stages">
+          <article>
+            <span>Stage 1</span>
+            <h3>MovingOS: 0-100 customers</h3>
+            <p>Prove willingness to pay with an AI Quote Engine and AI Office Manager. Inputs are pickup, dropoff, and inventory. Outputs are quote, contract, invoice, responses, follow-ups, and scheduling.</p>
+          </article>
+          <article>
+            <span>Stage 2</span>
+            <h3>Operating System: 100-1,000 customers</h3>
+            <p>Every job creates operational, financial, and geographic data: job type, distance, revenue, complaints, completion times, invoice values, payment timing, zip-code demand, and pricing trends.</p>
+          </article>
+          <article>
+            <span>Stage 3</span>
+            <h3>Intelligence Layer</h3>
+            <p>ServiceOS answers operator questions: which zip code is most profitable, what to charge for a 2-bedroom move, which services create disputes, and which jobs to avoid.</p>
+          </article>
+          <article>
+            <span>Stage 4</span>
+            <h3>Autonomous Business Layer</h3>
+            <p>The system recommends pricing, optimizes scheduling, launches marketing campaigns, and triggers retention workflows. The owner becomes a supervisor.</p>
+          </article>
+          <article>
+            <span>Stage 5</span>
+            <h3>Service Graph</h3>
+            <p>The hidden moat is relationships between customers, businesses, jobs, locations, and services. Like LinkedIn, the value comes from the network, not isolated records.</p>
+          </article>
+          <article>
+            <span>Stage 6</span>
+            <h3>Marketplace</h3>
+            <p>Own workflow first, transactions second, marketplace third. If one operator is fully booked, ServiceOS can route overflow work to another provider and take a 10-15% platform fee.</p>
+          </article>
+          <article>
+            <span>Stage 7</span>
+            <h3>ServiceOS Capital</h3>
+            <p>ServiceOS sees revenue, retention, completion rates, cash flow, and payment history better than banks. That data powers truck financing, equipment loans, working capital, and payroll advances.</p>
+          </article>
+          <article>
+            <span>Stage 8</span>
+            <h3>Vertical AI Workforce</h3>
+            <p>Customers do not buy software features. They hire Dispatcher AI, Sales AI, Customer Support AI, Billing AI, Compliance AI, and Marketing AI.</p>
+          </article>
+          <article>
+            <span>Stage 9</span>
+            <h3>Data Monopoly</h3>
+            <p>At 1 million jobs processed annually, ServiceOS knows market rates, labor costs, demand patterns, and seasonal fluctuations that competitors cannot recreate overnight.</p>
+          </article>
+          <article>
+            <span>Stage 10</span>
+            <h3>ServiceOS A</h3>
+            <p>A stands for Autonomous. Human Owner to ServiceOS A to AI Workforce to Business Operations. The owner wakes up to revenue, forecast, issues, and recommendations.</p>
+          </article>
+        </div>
+
+        <div class="autonomy-stack">
+          <div>
+            <p class="eyebrow">Destination</p>
+            <h3>Do not build moving-company software</h3>
+            <p>Build the first module of a future autonomous operating system. MovingOS is the beachhead. ServiceOS A is the destination.</p>
+          </div>
+          <div class="autonomy-flow" aria-label="ServiceOS A operating model">
+            <span>Human Owner</span>
+            <span>ServiceOS A</span>
+            <span>AI Workforce</span>
+            <span>Business Operations</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="faso-section" id="faso">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Burkina Faso path</p>
+            <h2>FasoOS is autonomous trade infrastructure for the informal economy</h2>
+          </div>
+        </div>
+
+        <div class="faso-hero">
+          <div>
+            <p class="eyebrow">Empire sequence</p>
+            <h3>FasoRegistre to FasoOS</h3>
+            <p>Do not start as a generic lending app. Start by registering operators, capturing real work, verifying transactions, routing demand, and using that private operating history to underwrite capital better than banks can.</p>
+          </div>
+          <div class="faso-chain" aria-label="FasoOS empire path">
+            <span>FasoRegistre</span>
+            <span>FasoMove</span>
+            <span>FasoTrade</span>
+            <span>FasoCapital</span>
+            <strong>FasoOS</strong>
+          </div>
+        </div>
+
+        <div class="faso-grid">
+          <article>
+            <span>01</span>
+            <h3>FasoRegistre</h3>
+            <p>Identity, business registration, operator profile, service area, equipment, references, and verified contact channels for informal businesses.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>FasoMove</h3>
+            <p>The workflow wedge: moving, delivery, transport jobs, quotes, customer messages, completion proof, and payment records.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>FasoTrade</h3>
+            <p>The marketplace layer routes jobs, demand, overflow work, supplier relationships, and cross-border trade opportunities between trusted operators.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>FasoCapital</h3>
+            <p>Working capital, equipment financing, truck financing, fuel advances, payroll advances, and inventory credit powered by verified operating data.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>FasoOS</h3>
+            <p>The autonomous operating layer for informal businesses: AI workforce, reputation, payments, intelligence, marketplace access, and capital access.</p>
+          </article>
+        </div>
+
+        <div class="capital-lab" aria-label="FasoCapital readiness calculator">
+          <article class="capital-copy">
+            <p class="eyebrow">Financing engine</p>
+            <h3>The real money is credit built on workflow truth</h3>
+            <p>Banks see an informal operator with limited paperwork. FasoOS sees completed jobs, repeat demand, payment timing, customer disputes, equipment usage, and reliability. That turns daily operations into a private credit graph.</p>
+            <div class="trust-signals">
+              <span>Verified identity</span>
+              <span>Completed jobs</span>
+              <span>Payment behavior</span>
+              <span>Customer reputation</span>
+              <span>Route density</span>
+              <span>Seasonal demand</span>
+            </div>
+          </article>
+
+          <article class="capital-calculator">
+            <div>
+              <p class="eyebrow">Capital readiness</p>
+              <h3>Underwrite from operations</h3>
+            </div>
+            <label>
+              Completed jobs per month
+              <input id="capital-jobs" type="number" min="0" value="32">
+            </label>
+            <label>
+              On-time payment rate
+              <span class="inline-output"><output id="capital-payment-output">84</output>%</span>
+              <input id="capital-payment" type="range" min="40" max="100" value="84">
+            </label>
+            <label>
+              Repeat customers
+              <span class="inline-output"><output id="capital-repeat-output">28</output>%</span>
+              <input id="capital-repeat" type="range" min="0" max="80" value="28">
+            </label>
+            <label>
+              Dispute rate
+              <span class="inline-output"><output id="capital-dispute-output">6</output>%</span>
+              <input id="capital-dispute" type="range" min="0" max="40" value="6">
+            </label>
+            <div class="capital-score">
+              <strong id="capital-score">78</strong>
+              <span id="capital-band">Ready for small working-capital advance</span>
+            </div>
+            <p id="capital-detail">FasoOS would recommend a starter advance tied to job volume, repayment timing, and completion consistency.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="architecture" id="architecture">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Scalable architecture</p>
+            <h2>One core platform, many vertical operating systems</h2>
+          </div>
+        </div>
+
+        <div class="brand-architecture">
+          <article>
+            <span>Year 1 public brand</span>
+            <h3>MovingOS AI</h3>
+            <p>Run your moving company without an office manager. This message is narrow, concrete, and easy for operators to understand immediately.</p>
+          </article>
+          <article>
+            <span>Company platform</span>
+            <h3>ServiceOS</h3>
+            <p>The backend engine, schema, agents, billing, messaging, templates, and analytics are built as a reusable platform from day one.</p>
+          </article>
+          <article>
+            <span>Year 2 expansion brand</span>
+            <h3>ServiceOS AI</h3>
+            <p>The AI operating system for local service businesses. Launch only after MovingOS proves the wedge and distribution engine.</p>
+          </article>
+        </div>
+
+        <div class="chapter-grid">
+          <article>
+            <span>Chapter 1</span>
+            <h3>MovingOS AI</h3>
+            <p>The AI office manager for moving companies. Quotes, contracts, invoices, follow-ups, claims reports, review requests, and operator CRM.</p>
+          </article>
+          <article>
+            <span>Chapter 2</span>
+            <h3>DeliveryOS AI</h3>
+            <p>The same operating workflows repackaged for furniture delivery, appliance delivery, junk removal, box trucks, and local logistics teams.</p>
+          </article>
+          <article>
+            <span>Chapter 3</span>
+            <h3>ServiceOS AI</h3>
+            <p>The AI operating system for local service businesses: cleaners, handymen, landscapers, plumbers, electricians, HVAC, and delivery operators.</p>
+          </article>
+        </div>
+
+        <div class="engine-layout">
+          <div class="engine-copy">
+            <p class="eyebrow">Universal engine</p>
+            <h3>Do not rebuild the company for every industry</h3>
+              <p>The durable product is the workflow engine. Each industry gets its own templates, pricing logic, prompts, intake questions, service-area rules, and language, while the core platform stays reusable.</p>
+          </div>
+          <div class="engine-grid" aria-label="Core platform modules">
+            <span>Customer CRM</span>
+            <span>Job management</span>
+            <span>Quote builder</span>
+            <span>Invoice builder</span>
+            <span>Payment reminders</span>
+            <span>Scheduling</span>
+            <span>Customer messaging</span>
+            <span>Review requests</span>
+            <span>AI assistant</span>
+            <span>Analytics dashboard</span>
+          </div>
+        </div>
+
+        <div class="packs-panel">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="eyebrow">Industry packs</p>
+              <h3>One platform, many vertical skins</h3>
+            </div>
+          </div>
+          <div class="pack-grid">
+            <article>
+              <h4>Moving Pack</h4>
+              <ul>
+                <li>Moving quote templates</li>
+                <li>Inventory checklist</li>
+                <li>Damage claim form</li>
+                <li>Crew notes</li>
+                <li>Bill of lading</li>
+                <li>Stair and heavy-item surcharge logic</li>
+              </ul>
+            </article>
+            <article>
+              <h4>Junk Removal Pack</h4>
+              <ul>
+                <li>Load size calculator</li>
+                <li>Dump fee estimator</li>
+                <li>Before and after photo workflow</li>
+                <li>Donation and disposal notes</li>
+              </ul>
+            </article>
+            <article>
+              <h4>Cleaning Pack</h4>
+              <ul>
+                <li>Room checklist</li>
+                <li>Recurring service scheduler</li>
+                <li>Deep-clean upsell logic</li>
+                <li>Customer access instructions</li>
+              </ul>
+            </article>
+            <article>
+              <h4>Handyman Pack</h4>
+              <ul>
+                <li>Material estimator</li>
+                <li>Work order forms</li>
+                <li>Before and after proof</li>
+                <li>Scope-change approval flow</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="graduation-panel">
+          <div>
+            <p class="eyebrow">Graduation strategy</p>
+            <h3>Niche wins faster</h3>
+            <p>Do not launch ServiceOS first. It is too broad for the first sales motion. Win movers, then add adjacent verticals, then general home services, then graduate the public brand.</p>
+          </div>
+          <ol class="graduation-steps">
+            <li><span>Step 1</span><strong>Win movers</strong><p>MovingOS AI becomes the default AI office manager for moving operators.</p></li>
+            <li><span>Step 2</span><strong>Add adjacent verticals</strong><p>Junk removal, furniture delivery, and appliance delivery share the same operational DNA.</p></li>
+            <li><span>Step 3</span><strong>Add home services</strong><p>Cleaning, handyman, and landscaping packs extend the core platform to more local operators.</p></li>
+            <li><span>Step 4</span><strong>Become ServiceOS AI</strong><p>The platform graduates once the narrow wedge, workflows, and distribution channels are proven.</p></li>
+          </ol>
+        </div>
+
+        <div class="tech-grid">
+          <article>
+            <span>Frontend</span>
+            <h4>Mobile-first portals</h4>
+            <p>Next.js or FlutterFlow for the operator dashboard, customer portal, admin portal, and installable mobile experience.</p>
+          </article>
+          <article>
+            <span>Backend</span>
+            <h4>Lean SaaS stack</h4>
+            <p>Supabase or PostgreSQL, Stripe Billing, Twilio SMS, SendGrid email, OpenAI API, and Zapier, Make, or n8n integrations.</p>
+          </article>
+          <article>
+            <span>AI agents</span>
+            <h4>Role-based automation</h4>
+            <p>Quote Agent, Admin Agent, Follow-Up Agent, Claim Agent, and Insight Agent work across every industry pack.</p>
+          </article>
+          <article>
+            <span>Market signal</span>
+            <h4>AI support is moving fast</h4>
+            <p>Salesforce announced a planned $3.6B acquisition of Fin in June 2026, validating the race toward autonomous customer-support agents.</p>
+          </article>
+        </div>
+
+        <div class="schema-panel">
+          <div>
+            <p class="eyebrow">Database design</p>
+            <h3>Multi-industry from day one</h3>
+            <p>Use a shared schema with industry-specific templates and rules. That keeps MovingOS focused while making ServiceOS possible without a rewrite.</p>
+          </div>
+          <div class="schema-grid" aria-label="Core database tables">
+            <span>Users</span>
+            <span>Businesses</span>
+            <span>Customers</span>
+            <span>Jobs</span>
+            <span>Quotes</span>
+            <span>Invoices</span>
+            <span>Payments</span>
+            <span>Messages</span>
+            <span>Templates</span>
+            <span>Industry_Packs</span>
+            <span>Reviews</span>
+            <span>Claims</span>
+            <span>Automations</span>
+          </div>
+        </div>
+
+        <div class="phase-model">
+          <article>
+            <p class="eyebrow">Phase 1: MovingOS</p>
+            <h3>Get to $1M with a narrow wedge</h3>
+            <p>Starter at $49/month, Pro at $149/month, Business at $299/month. At 500 customers on Pro, subscription revenue reaches about $894,000/year before setup fees and template sales.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Phase 2: ServiceOS</p>
+            <h3>Expand ARPU with broader verticals</h3>
+            <p>Solo at $99/month, Growth at $299/month, Pro at $799/month, Franchise or Agency at $1,499/month. Just 56 franchise-tier customers gets near $1M/year.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking-grid" id="dispatcher-demo" aria-label="AI dispatcher demo">
         <form class="booking-panel" id="quote-form">
           <div class="panel-heading">
             <div>
-              <p class="eyebrow">Instant quote</p>
-              <h2>Tell us what is moving</h2>
+              <p class="eyebrow">Module 1: AI Quote Builder</p>
+              <h2>Generate the operator package</h2>
             </div>
-            <span class="status-pill">Live estimate</span>
+            <span class="status-pill">Live workflow</span>
           </div>
 
           <div class="field-row">
             <label>
               Pickup
-              <input name="pickup" type="text" placeholder="123 Main St" autocomplete="street-address">
+              <input name="pickup" type="text" placeholder="123 Main St">
             </label>
             <label>
               Dropoff
-              <input name="dropoff" type="text" placeholder="456 Oak Ave" autocomplete="street-address">
+              <input name="dropoff" type="text" placeholder="456 Oak Ave">
             </label>
           </div>
 
+          <label>
+              Job description and photos
+              <textarea name="inventory" rows="4" placeholder="Customer uploaded photos plus: sofa, dresser, bed frame, 12 boxes, TV stand"></textarea>
+          </label>
+
           <div class="field-row">
             <label>
-              Move date
-              <input name="date" type="date">
+              Move type
+              <select name="service">
+                <option value="local">Local move</option>
+                <option value="delivery">Furniture delivery</option>
+                <option value="labor">Labor only</option>
+                <option value="junk">Junk removal</option>
+              </select>
             </label>
             <label>
-              Arrival window
-              <select name="window">
-                <option>8:00 AM - 10:00 AM</option>
-                <option>10:00 AM - 12:00 PM</option>
-                <option>12:00 PM - 2:00 PM</option>
-                <option>2:00 PM - 4:00 PM</option>
-                <option>4:00 PM - 6:00 PM</option>
+              Crew size
+              <select name="crew">
+                <option value="2">2 movers</option>
+                <option value="3">3 movers</option>
+                <option value="4">4 movers</option>
               </select>
             </label>
           </div>
 
-          <fieldset class="segmented-control">
-            <legend>Service type</legend>
-            <label><input type="radio" name="service" value="delivery" checked><span>Delivery</span></label>
-            <label><input type="radio" name="service" value="small-move"><span>Small move</span></label>
-            <label><input type="radio" name="service" value="full-move"><span>Full move</span></label>
-          </fieldset>
-
           <div class="field-row">
-            <label>
-              Item size
-              <select name="size">
-                <option value="single">Single item</option>
-                <option value="room">Studio or room</option>
-                <option value="apartment">Apartment</option>
-                <option value="home">Home</option>
-              </select>
-            </label>
             <label>
               Stairs
-              <input name="stairs" type="number" min="0" max="8" value="0">
+              <input name="stairs" type="number" min="0" max="8" value="1">
+            </label>
+            <label>
+              Distance
+              <span class="inline-output"><output id="distance-output">12</output> miles</span>
+              <input name="distance" type="range" min="1" max="80" value="12">
             </label>
           </div>
 
-          <label>
-            Vehicle tier
-            <select name="vehicle">
-              <option value="lite">Lite - labor only</option>
-              <option value="pickup">Pickup - small item delivery</option>
-              <option value="van">Van - furniture delivery</option>
-              <option value="xl">XL - large items</option>
-              <option value="box">Box truck - apartment move</option>
-              <option value="boxPlus">Box+ - larger move</option>
-            </select>
-          </label>
-
-          <label class="range-label">
-            Estimated distance
-            <span><output id="distance-output">8</output> miles</span>
-            <input name="distance" type="range" min="1" max="60" value="8">
-          </label>
-
-          <div class="option-grid">
-            <label><input name="assembly" type="checkbox">Assembly help</label>
-            <label><input name="packing" type="checkbox">Packing supplies</label>
-            <label><input name="priority" type="checkbox">Priority dispatch</label>
-            <label><input name="protection" type="checkbox" checked>Damage protection</label>
-            <label><input name="labor" type="checkbox">Labor only</label>
-            <label><input name="removal" type="checkbox">Removal haul-away</label>
-          </div>
-
-          <label>
-            Notes for crew
-            <textarea name="notes" rows="3" placeholder="Gate code, elevator details, item count, parking notes"></textarea>
-          </label>
+          <fieldset class="option-grid">
+            <legend>AI modules</legend>
+            <label><input name="contract" type="checkbox" checked>Contract</label>
+            <label><input name="invoice" type="checkbox" checked>Invoice</label>
+            <label><input name="scheduling" type="checkbox" checked>Scheduling</label>
+            <label><input name="receptionist" type="checkbox" checked>Receptionist</label>
+            <label><input name="crm" type="checkbox">CRM</label>
+            <label><input name="reputation" type="checkbox">Reputation</label>
+          </fieldset>
         </form>
 
         <aside class="estimate-panel" aria-live="polite">
           <div class="estimate-card">
-            <p class="eyebrow">Estimated total</p>
-            <strong id="estimate-total">$118</strong>
-            <span id="estimate-detail">2 movers, 1 truck, about 70 minutes</span>
+            <p class="eyebrow">AI estimate</p>
+            <strong id="estimate-total">$642</strong>
+            <span id="estimate-detail">2 movers, 3.1 hours, operator package ready</span>
           </div>
           <dl class="price-breakdown">
-            <div><dt>Vehicle minimum</dt><dd id="base-price">$89</dd></div>
-            <div><dt>Time & labor</dt><dd id="labor-price">$0</dd></div>
-            <div><dt>Distance</dt><dd id="distance-price">$24</dd></div>
-            <div><dt>Add-ons</dt><dd id="addon-price">$5</dd></div>
+            <div><dt>Labor</dt><dd id="labor-price">$372</dd></div>
+            <div><dt>Travel</dt><dd id="distance-price">$72</dd></div>
+            <div><dt>Software value</dt><dd id="ops-price">$39</dd></div>
+            <div><dt>Automation value</dt><dd id="automation-price">$159</dd></div>
           </dl>
-          <p class="fine-print">Pricing uses an instant estimate model with vehicle tier, mileage, labor time, stairs, and selected add-ons.</p>
-          <button class="primary-action wide" id="book-button" type="button">Reserve crew</button>
-          <button class="ghost-action wide" id="save-draft-button" type="button">Save booking draft</button>
-          <p class="fine-print">Estimate updates as details change. Final price can adjust if the job scope changes on site.</p>
+          <div class="generated-stack">
+            <h3>Generated operator package</h3>
+            <ul id="generated-list"></ul>
+          </div>
+          <button class="primary-action wide" id="generate-button" type="button">Generate package</button>
+          <button class="ghost-action wide" id="save-button" type="button">Save pilot scenario</button>
         </aside>
       </section>
 
-      <section class="services" id="services">
+      <section class="workflow" id="suite">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">What we handle</p>
-            <h2>Moving help for homes, stores, and offices</h2>
+            <p class="eyebrow">Product suite</p>
+            <h2>Five modules that replace office-manager work</h2>
           </div>
         </div>
-
-        <div class="service-grid">
+        <div class="feature-grid">
           <article>
-            <span>Move</span>
-            <h3>Moving</h3>
-            <p>Apartment, room-to-room, small business, and same-day moving help.</p>
+            <span>01</span>
+            <h3>AI Quote Builder</h3>
+            <p>Customer photos and job descriptions become professional estimates, pricing recommendations, contracts, and scope notes.</p>
           </article>
           <article>
-            <span>Drop</span>
-            <h3>Delivery</h3>
-            <p>Fast pickup and dropoff for marketplace, retail, and oversized items.</p>
+            <span>02</span>
+            <h3>AI Scheduling</h3>
+            <p>Books appointments, sends reminders, handles reschedules, and keeps customers informed without constant texting.</p>
           </article>
           <article>
-            <span>Lift</span>
-            <h3>Labor</h3>
-            <p>Load, unload, rearrange, stage, and heavy-lift support without a truck.</p>
+            <span>03</span>
+            <h3>AI Receptionist</h3>
+            <p>Answers pricing, service-area, availability, and preparation questions 24/7 before a human ever touches the lead.</p>
           </article>
           <article>
-            <span>Sofa</span>
-            <h3>Furniture delivery</h3>
-            <p>Sofas, beds, tables, dressers, office furniture, and store purchases.</p>
+            <span>04</span>
+            <h3>AI CRM</h3>
+            <p>Tracks leads, customers, jobs, payments, open quotes, claims, and follow-ups in one simple operator cockpit.</p>
           </article>
           <article>
-            <span>Build</span>
-            <h3>Furniture assembly</h3>
-            <p>Assembly support after delivery so items are placed and ready to use.</p>
-          </article>
-          <article>
-            <span>Haul</span>
-            <h3>Furniture & appliance removal</h3>
-            <p>Haul-away for old furniture, appliances, bulky items, and cleanouts.</p>
+            <span>05</span>
+            <h3>Reputation Manager</h3>
+            <p>Requests Google and Facebook reviews after successful jobs so operators win local search through better trust signals.</p>
           </article>
         </div>
       </section>
 
-      <section class="service-areas" id="service-areas">
+      <section class="flywheel" id="flywheel">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Service areas</p>
-            <h2>Available in Texas and New York</h2>
+            <p class="eyebrow">Core moat</p>
+            <h2>The moat is workflow data, not generic AI</h2>
           </div>
         </div>
-
-        <div class="area-grid">
+        <div class="intelligence-grid">
           <article>
-            <span>TX</span>
-            <h3>Texas</h3>
-            <p>Moving, delivery, labor help, furniture assembly, and furniture or appliance removal across supported Texas service zones.</p>
+            <h3>Industry workflows</h3>
+            <p>MovingOS knows when to add stairs, heavy-item, long-carry, elevator, customer no-help, and damage-claim logic.</p>
           </article>
           <article>
-            <span>NY</span>
-            <h3>New York</h3>
-            <p>On-demand moving and delivery support for New York customers, including furniture delivery, assembly, labor, and removal.</p>
+            <h3>Templates</h3>
+            <p>Contracts, bills of lading, crew notes, claim reports, quote follow-ups, and review requests improve by vertical.</p>
+          </article>
+          <article>
+            <h3>Pricing data</h3>
+            <p>Average prices by city, job size, distance, inventory, stairs, timing, labor assumptions, and quote-to-close rates.</p>
+          </article>
+          <article>
+            <h3>Communication history</h3>
+            <p>Customer questions, objections, disputes, unpaid invoices, review patterns, and service outcomes become defensible data.</p>
           </article>
         </div>
       </section>
 
-      <section class="agent-console" id="agent" aria-label="Automation agent">
-        <div class="agent-copy">
-          <p class="eyebrow">Automation agent</p>
-          <h2>Let the dispatch agent run the site</h2>
-          <p>The agent can fill a realistic move request, calculate the quote, reserve a crew, assign dispatch, advance live tracking, and update the operations board.</p>
+      <section class="growth" id="growth">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Distribution moat</p>
+            <h2>Build a media company that monetizes through software</h2>
+          </div>
+        </div>
+        <div class="growth-grid">
+          <article>
+            <h3>Daily blog</h3>
+            <p>Moving estimate template, moving contract template, local pricing pages, invoice generator, and claim form pages.</p>
+          </article>
+          <article>
+            <h3>Daily YouTube</h3>
+            <p>Moving startup guides, box truck business tips, LUGG and Dolly alternatives, pricing calculators, and operator breakdowns.</p>
+          </article>
+          <article>
+            <h3>Weekly newsletter</h3>
+            <p>One operating lesson becomes a blog article, X post, LinkedIn post, Facebook post, YouTube short, and TikTok clip.</p>
+          </article>
+          <article>
+            <h3>Free community</h3>
+            <p>Operators join for templates, pricing benchmarks, teardown videos, and tactical playbooks before buying software.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Revenue engine</p>
+            <h2>Only 84 Pro customers crosses $1M ARR</h2>
+          </div>
+        </div>
+        <div class="pricing-grid">
+          <article><span>Starter</span><strong>$99/mo</strong><p>AI quote builder, basic contract output, invoice drafts, and review requests for solo operators.</p></article>
+          <article><span>Growth</span><strong>$299/mo</strong><p>Scheduling, receptionist, CRM, payment follow-ups, templates, and local reputation workflows.</p></article>
+          <article><span>Pro</span><strong>$999/mo</strong><p>White-label portal, advanced automation, claim workflows, analytics, integrations, and priority setup.</p></article>
+          <article><span>Data</span><strong>Future</strong><p>Market pricing intelligence, demand benchmarks, risk data, and operator performance insights.</p></article>
+          <article><span>API</span><strong>$1k+/mo</strong><p>Connect lead vendors, marketplaces, field apps, CRMs, payments, lenders, and insurance partners.</p></article>
+        </div>
+      </section>
+
+      <section class="launch-cockpit" id="launch">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Launch cockpit</p>
+            <h2>Turn the thesis into weekly execution</h2>
+          </div>
         </div>
 
-        <div class="agent-panel">
-          <div class="agent-toolbar">
-            <button class="primary-action" type="button" data-agent-run>Run agent</button>
-            <button class="ghost-action" type="button" data-agent-pause>Pause</button>
-            <button class="ghost-action" type="button" data-agent-reset>Reset</button>
-          </div>
+        <div class="cockpit-layout">
+          <article class="mvp-card">
+            <h3>First 30 days</h3>
+            <ol class="launch-list">
+              <li><span>01</span><strong>Landing page</strong><p>MovingOS AI, not ServiceOS. One promise: run your moving company without an office manager.</p></li>
+              <li><span>02</span><strong>Quote builder</strong><p>Photos and inventory become estimate, contract, invoice, and crew notes.</p></li>
+              <li><span>03</span><strong>Template pack</strong><p>Free moving contract, bill of lading, claims form, and review request templates.</p></li>
+              <li><span>04</span><strong>100 operator calls</strong><p>Sell the pain before overbuilding the platform.</p></li>
+            </ol>
+          </article>
 
-          <div class="agent-status-card">
-            <span class="pulse-dot" aria-hidden="true"></span>
+          <article class="calculator-card">
             <div>
-              <strong id="agent-status">Standing by</strong>
-              <p id="agent-detail">Ready to automate a Dash K Express booking.</p>
+              <p class="eyebrow">Revenue calculator</p>
+              <h3>How many customers to $1M ARR?</h3>
             </div>
-          </div>
-
-          <ol class="agent-steps" id="agent-steps">
-            <li data-step="quote"><span></span>Fill customer request</li>
-            <li data-step="estimate"><span></span>Calculate quote</li>
-            <li data-step="reserve"><span></span>Reserve crew</li>
-            <li data-step="dispatch"><span></span>Assign nearest truck</li>
-            <li data-step="track"><span></span>Advance tracking</li>
-            <li data-step="ops"><span></span>Update dispatch board</li>
-          </ol>
-
-          <div class="agent-log" id="agent-log" aria-live="polite">
-            <p>Agent log will appear here.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="dashboard" id="tracking">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Customer app</p>
-            <h2>Every job has a clear path</h2>
-          </div>
-          <button class="ghost-action compact" data-advance-status>Advance status</button>
-        </div>
-
-        <div class="tracking-layout">
-          <div class="phone-shell">
-            <div class="phone-screen">
-              <div class="map-panel">
-                <span class="route-dot pickup-dot"></span>
-                <span class="route-line"></span>
-                <span class="route-dot dropoff-dot"></span>
-                <span class="van-marker"></span>
-              </div>
-              <div class="job-card">
-                <span class="status-pill" id="mobile-status">Crew assigned</span>
-                <h3>West Loop sofa delivery</h3>
-                <p id="mobile-detail">Marco and Jalen arrive in 28 minutes.</p>
-                <div class="crew-mini">
-                  <span>MJ</span>
-                  <span>JL</span>
-                  <small>4.9 crew rating</small>
-                </div>
-              </div>
+            <label>
+              Monthly price
+              <select id="revenue-price">
+                <option value="49">Starter - $49</option>
+                <option value="149" selected>MovingOS Pro - $149</option>
+                <option value="299">MovingOS Business - $299</option>
+                <option value="799">ServiceOS Pro - $799</option>
+                <option value="1499">Franchise - $1,499</option>
+              </select>
+            </label>
+            <label>
+              Setup/template revenue per customer
+              <input id="setup-fee" type="number" min="0" value="199">
+            </label>
+            <div class="calculator-result">
+              <strong id="customers-needed">478</strong>
+              <span>customers needed for about $1M first-year revenue</span>
             </div>
-          </div>
-
-          <ol class="timeline" id="timeline">
-            <li class="done"><span></span><strong>Booked</strong><p>Customer confirmed quote and arrival window.</p></li>
-            <li class="done"><span></span><strong>Crew assigned</strong><p>Two movers and a box truck matched to the job.</p></li>
-            <li><span></span><strong>En route</strong><p>Live ETA and route share with the customer.</p></li>
-            <li><span></span><strong>Loading</strong><p>Photos and scope changes can be logged in the app.</p></li>
-            <li><span></span><strong>Complete</strong><p>Customer signs, tips, rates, and receives a receipt.</p></li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="crews" id="teams">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Crew marketplace</p>
-            <h2>Match the right truck to the right job</h2>
-          </div>
-        </div>
-        <div class="crew-grid">
-          <article class="crew-card active" data-crew="marco">
-            <span class="avatar">MR</span>
-            <div>
-              <h3>Marco Rivera</h3>
-              <p>Box truck, dolly, straps</p>
-            </div>
-            <strong>12 min</strong>
+            <p id="revenue-detail">At $149/month plus $199 setup/template revenue, 478 customers reaches about $1,000,000 in year-one revenue.</p>
           </article>
-          <article class="crew-card" data-crew="tasha">
-            <span class="avatar">TP</span>
-            <div>
-              <h3>Tasha Price</h3>
-              <p>Cargo van, furniture pads</p>
-            </div>
-            <strong>18 min</strong>
+        </div>
+
+        <div class="execution-grid">
+          <article>
+            <span>Lead magnet</span>
+            <h3>Free AI contract package</h3>
+            <p>Offer a moving contract, damage claim form, review message, and quote follow-up script in exchange for email and company size.</p>
           </article>
-          <article class="crew-card" data-crew="noah">
-            <span class="avatar">NO</span>
-            <div>
-              <h3>Noah Ortiz</h3>
-              <p>Pickup truck, appliance dolly</p>
-            </div>
-            <strong>24 min</strong>
+          <article>
+            <span>Outbound</span>
+            <h3>100 movers per week</h3>
+            <p>Use Google Maps, Yelp, Facebook groups, and local directories. The first CTA is not a demo; it is a free template pack.</p>
+          </article>
+          <article>
+            <span>Content</span>
+            <h3>One idea, six assets</h3>
+            <p>Each operator lesson becomes a blog post, YouTube short, LinkedIn post, Facebook post, X post, and email newsletter.</p>
+          </article>
+          <article>
+            <span>Onboarding</span>
+            <h3>Concierge first</h3>
+            <p>Manually set up pricing rules, service areas, SMS templates, and review links before automating the repeatable pieces.</p>
           </article>
         </div>
       </section>
 
-      <section class="ops-board" id="ops">
+      <section class="roadmap" id="platform">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Dispatch console</p>
-            <h2>Today at a glance</h2>
-          </div>
-          <div class="ops-tabs" role="tablist" aria-label="Dispatch filters">
-            <button class="active" type="button">Active</button>
-            <button type="button">Quoted</button>
-            <button type="button">Completed</button>
+            <p class="eyebrow">Expansion flywheel</p>
+            <h2>From MovingOS wedge to infrastructure company</h2>
           </div>
         </div>
+        <ol class="timeline">
+          <li><span>Year 1</span><strong>MovingOS</strong><p>500 customers, narrow wedge, founder-led onboarding, content engine, and proprietary quote data.</p></li>
+          <li><span>Year 2</span><strong>DeliveryOS</strong><p>1,500 customers across furniture delivery, appliance delivery, box truck services, and adjacent logistics.</p></li>
+          <li><span>Year 3</span><strong>JunkOS</strong><p>4,000 customers and deeper operating benchmarks across lead flow, job size, labor, and local pricing.</p></li>
+          <li><span>Year 4</span><strong>ServiceOS</strong><p>10,000+ customers across moving, delivery, junk removal, cleaning, handyman, landscaping, and trades.</p></li>
+          <li><span>Year 5</span><strong>Marketplace</strong><p>Launch ServiceOS Leads using provider availability, quality, zip-code demand, and job history.</p></li>
+          <li><span>Year 6</span><strong>Capital</strong><p>Launch ServiceOS Capital using invoices, revenue, job volume, payment history, and operator health signals.</p></li>
+        </ol>
 
-        <div class="ops-columns">
-          <article data-job-card="quoted">
-            <span>8:30 AM</span>
-            <h3>Marketplace dresser pickup</h3>
-            <p>1 mover, cargo van, 6 miles</p>
-            <meter min="0" max="100" value="35"></meter>
-          </article>
-          <article data-job-card="active">
-            <span>10:00 AM</span>
-            <h3>Apartment mini move</h3>
-            <p>2 movers, box truck, elevator reserved</p>
-            <meter min="0" max="100" value="62"></meter>
-          </article>
-          <article data-job-card="assigned">
-            <span>1:00 PM</span>
-            <h3>Retail sofa delivery</h3>
-            <p>2 movers, protection plan, assembly</p>
-            <meter min="0" max="100" value="15"></meter>
-          </article>
+        <div class="end-state">
+          <div>
+            <p class="eyebrow">10-year end state</p>
+            <h3>ServiceOS A: not software, infrastructure.</h3>
+            <p>ServiceOS A becomes the autonomous operating system, marketplace, financing platform, and industry data network for local service businesses. At that point, the company is difficult to replace because it owns workflow, demand, payments, capital, and data.</p>
+          </div>
+          <div class="mix-grid" aria-label="Long-term revenue mix">
+            <article><strong>40%</strong><span>Subscriptions</span></article>
+            <article><strong>30%</strong><span>Transaction fees</span></article>
+            <article><strong>20%</strong><span>Financial products</span></article>
+            <article><strong>10%</strong><span>Data products</span></article>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <strong>Dash K Express</strong>
-      <span>www.dashkexpress.com | kass@dashkexpress.com | 281 941 6279 | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></span>
+      <strong>MovingOS AI</strong>
+      <span>The moving-company wedge for ServiceOS AI. <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></span>
     </footer>
 
     <nav class="mobile-tabbar" aria-label="Mobile app navigation">
-      <a href="#booking"><span>Book</span></a>
-      <a href="#services"><span>Services</span></a>
-      <a href="#tracking"><span>Track</span></a>
-      <a href="#agent"><span>Agent</span></a>
+      <a href="#product"><span>Product</span></a>
+      <a href="#dispatcher-demo"><span>Demo</span></a>
+      <a href="#flywheel"><span>Data</span></a>
+      <a href="#pricing"><span>Pricing</span></a>
     </nav>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=8"></script>
   </body>
 </html>

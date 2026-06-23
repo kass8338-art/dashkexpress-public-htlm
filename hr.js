@@ -1,4 +1,3 @@
-const HR_ACCESS_CODE = "DASHKHR2026";
 const HR_UNLOCK_KEY = "dashKExpressHrUnlocked";
 const loginSection = document.querySelector("#hr-login");
 const loginForm = document.querySelector("#hr-login-form");
@@ -8,6 +7,9 @@ const hrForm = document.querySelector("#crew-application-form");
 const hrRunButton = document.querySelector("[data-hr-run]");
 const hrResetButton = document.querySelector("[data-hr-reset]");
 const hrEmailButton = document.querySelector("[data-hr-email]");
+const hrSubmitButton = document.querySelector("[data-hr-submit]");
+const hrLogoutButton = document.querySelector("[data-hr-logout]");
+const hrSubmitMessage = document.querySelector("#hr-submit-message");
 const hrStatus = document.querySelector("#hr-status");
 const hrSteps = Array.from(document.querySelectorAll("#hr-steps li"));
 const hrNextTask = document.querySelector("#hr-next-task");
@@ -33,6 +35,7 @@ function updateHrSummary() {
 function setHrUnlocked(unlocked) {
   loginSection.hidden = unlocked;
   recruitingSection.hidden = !unlocked;
+  hrLogoutButton.hidden = !unlocked;
   recruitingSection.classList.toggle("is-locked", !unlocked);
 
   if (unlocked) {
@@ -41,6 +44,24 @@ function setHrUnlocked(unlocked) {
       hrForm.elements.applicantName.focus();
     });
   }
+}
+
+async function apiRequest(url, options = {}) {
+  const response = await fetch(url, {
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {})
+    },
+    ...options
+  });
+  const payload = await response.json().catch(() => ({}));
+
+  if (!response.ok) {
+    throw new Error(payload.error || "Request failed");
+  }
+
+  return payload;
 }
 
 function getCheckedSkills() {
@@ -72,6 +93,17 @@ function buildApplicantEmail() {
   ].join("\n");
 
   return `mailto:kass@dashkexpress.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function applicantPayload() {
+  return {
+    applicantName: hrForm.elements.applicantName.value,
+    applicantPhone: hrForm.elements.applicantPhone.value,
+    role: hrForm.elements.role.value,
+    market: hrForm.elements.market.value,
+    skills: getCheckedSkills(),
+    screeningNotes: hrForm.elements.screeningNotes.value
+  };
 }
 
 function setHrStep(stepName, state) {
@@ -145,28 +177,68 @@ hrResetButton.addEventListener("click", resetHrAgent);
 hrEmailButton.addEventListener("click", () => {
   window.location.href = buildApplicantEmail();
 });
+hrSubmitButton.addEventListener("click", async () => {
+  hrSubmitButton.disabled = true;
+  hrSubmitButton.textContent = "Submitting";
+  hrSubmitMessage.textContent = "Sending applicant summary to the protected HR endpoint.";
 
-function unlockHrConsole(event) {
+  try {
+    const result = await apiRequest("/api/hr-applicant", {
+      method: "POST",
+      body: JSON.stringify(applicantPayload())
+    });
+    hrSubmitMessage.textContent = result.message || "Applicant summary submitted.";
+  } catch (error) {
+    hrSubmitMessage.textContent = `${error.message} Use email backup if needed.`;
+  } finally {
+    hrSubmitButton.disabled = false;
+    hrSubmitButton.textContent = "Submit applicant summary";
+  }
+});
+
+async function unlockHrConsole(event) {
   event.preventDefault();
+  loginForm.querySelector("button[type='submit']").disabled = true;
+  loginMessage.textContent = "Checking HR access.";
 
-  if (loginForm.elements.accessCode.value.trim() === HR_ACCESS_CODE) {
+  try {
+    await apiRequest("/api/hr-login", {
+      method: "POST",
+      body: JSON.stringify({ accessCode: loginForm.elements.accessCode.value.trim() })
+    });
     loginForm.classList.remove("denied");
     loginMessage.textContent = "Access granted.";
     setHrUnlocked(true);
     return;
+  } catch (error) {
+    loginForm.classList.add("denied");
+    loginMessage.textContent = error.message;
+    loginForm.elements.accessCode.select();
+  } finally {
+    loginForm.querySelector("button[type='submit']").disabled = false;
   }
-
-  loginForm.classList.add("denied");
-  loginMessage.textContent = "Access denied. Check the HR code and try again.";
-  loginForm.elements.accessCode.select();
 }
 
 loginForm.addEventListener("submit", unlockHrConsole);
 loginForm.querySelector("button[type='submit']").addEventListener("click", unlockHrConsole);
+hrLogoutButton.addEventListener("click", async () => {
+  await apiRequest("/api/hr-logout", { method: "POST" }).catch(() => null);
+  sessionStorage.removeItem(HR_UNLOCK_KEY);
+  setHrUnlocked(false);
+  loginMessage.textContent = "Logged out.";
+  loginForm.elements.accessCode.value = "";
+  loginForm.elements.accessCode.focus();
+});
 
-if (sessionStorage.getItem(HR_UNLOCK_KEY) === "true") {
-  setHrUnlocked(true);
-}
+apiRequest("/api/hr-session")
+  .then((session) => {
+    setHrUnlocked(!!session.authenticated);
+  })
+  .catch(() => {
+    if (sessionStorage.getItem(HR_UNLOCK_KEY) === "true") {
+      loginMessage.textContent = "Server session check unavailable. Use the HR code when deployed.";
+    }
+  });
 
 updateHrSummary();
 

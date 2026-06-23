@@ -26,7 +26,10 @@
         <a href="#crew-application-form">Applicant</a>
         <a href="mailto:kass@dashkexpress.com">Email HR</a>
       </nav>
-      <a class="call-button" href="https://www.dashkexpress.com/">Public site</a>
+      <div class="header-actions">
+        <button class="ghost-action compact" type="button" data-hr-logout hidden>Logout</button>
+        <a class="call-button" href="https://www.dashkexpress.com/">Public site</a>
+      </div>
     </header>
 
     <main>
@@ -40,7 +43,7 @@
             <input name="accessCode" type="password" inputmode="text" autocomplete="current-password" placeholder="Enter HR code">
           </label>
           <button class="primary-action wide" type="submit">Unlock HR console</button>
-          <p class="fine-print" id="hr-login-message" aria-live="polite">Private screen only. Add server-side authentication before storing real applicant data.</p>
+          <p class="fine-print" id="hr-login-message" aria-live="polite">Server-side HR session required. Ask the owner for the current access code.</p>
         </form>
       </section>
 
@@ -109,8 +112,9 @@
               <textarea name="screeningNotes" rows="3">Two years moving experience, clean customer service record, available same-day dispatch.</textarea>
             </label>
 
-            <button class="primary-action wide" type="button" data-hr-email>Send application by email</button>
-            <p class="fine-print">This opens your email app with the applicant summary. Do not include sensitive documents by email.</p>
+            <button class="primary-action wide" type="button" data-hr-submit>Submit applicant summary</button>
+            <button class="ghost-action wide" type="button" data-hr-email>Open email backup</button>
+            <p class="fine-print" id="hr-submit-message" aria-live="polite">Submissions require an active HR session. Do not include sensitive documents by email.</p>
           </form>
 
           <div class="hr-panel">
