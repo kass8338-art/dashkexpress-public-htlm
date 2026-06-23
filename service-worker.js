@@ -1,13 +1,16 @@
-const CACHE_NAME = "movingos-ai-v10";
+const CACHE_NAME = "dash-k-express-booking-v11";
 const APP_SHELL = [
   "/",
   "/index.html",
   "/privacy.html",
   "/terms.html",
   "/hr.html",
-  "/styles.css?v=8",
-  "/app.js?v=8",
+  "/styles.css?v=11",
+  "/app.js?v=11",
   "/hr.js?v=10",
+  "/movingos-ai.html",
+  "/movingos-ai.css",
+  "/movingos-ai.js",
   "/manifest.webmanifest",
   "/icons/icon.svg",
   "/icons/apple-touch-icon.svg"
