@@ -689,6 +689,32 @@ h3 {
   color: var(--ink);
 }
 
+.assistant-mode {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.assistant-mode article {
+  display: grid;
+  gap: 5px;
+  min-height: 96px;
+  padding: 14px;
+  border: 1px solid rgba(12, 122, 99, 0.18);
+  border-radius: 8px;
+  background: #f6fbf8;
+}
+
+.assistant-mode strong {
+  color: var(--green-dark);
+}
+
+.assistant-mode span {
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: 0.9rem;
+}
+
 .agent-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -706,32 +732,6 @@ h3 {
 .agent-status-card p {
   margin: 4px 0 0;
   color: var(--muted);
-}
-
-.pulse-dot {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  border-radius: 50%;
-  background: var(--orange);
-}
-
-.pulse-dot::after {
-  content: "";
-  position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  border: 2px solid rgba(242, 123, 53, 0.28);
-}
-
-.agent-panel.running .pulse-dot {
-  background: var(--green);
-}
-
-.agent-panel.running .pulse-dot::after {
-  animation: pulse-ring 1.1s ease-out infinite;
-  border-color: rgba(12, 122, 99, 0.35);
 }
 
 .agent-steps {
@@ -1534,6 +1534,10 @@ footer a {
   footer {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .assistant-mode {
+    grid-template-columns: 1fr;
   }
 
   body {

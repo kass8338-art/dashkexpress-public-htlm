@@ -1,17 +1,17 @@
-const CACHE_NAME = "dash-k-express-booking-v12";
+const CACHE_NAME = "dash-k-express-booking-v13";
 const APP_SHELL = [
   "/",
   "/index.html",
   "/privacy.html",
   "/terms.html",
   "/hr.html",
-  "/styles.css?v=12",
-  "/app.js?v=12",
+  "/styles.css?v=13",
+  "/app.js?v=13",
   "/hr.js?v=10",
   "/movingos-ai.html",
   "/movingos-ai.css",
   "/movingos-ai.js",
-  "/manifest.webmanifest?v=12",
+  "/manifest.webmanifest?v=13",
   "/icons/icon.svg",
   "/icons/apple-touch-icon.svg"
 ];

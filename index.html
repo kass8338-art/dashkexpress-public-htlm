@@ -13,7 +13,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=13">
   </head>
   <body>
     <header class="topbar">
@@ -28,7 +28,7 @@
         <a href="#booking">Book</a>
         <a href="#services">Services</a>
         <a href="#tracking">Track</a>
-        <a href="#agent">Agent</a>
+        <a href="#assistant">Assistant</a>
         <a href="#platform">Platform</a>
         <a href="#ops">Dispatch</a>
         <a href="mailto:kass@dashkexpress.com">Email</a>
@@ -268,39 +268,50 @@
         </div>
       </section>
 
-      <section class="agent-console" id="agent" aria-label="Automation agent">
+      <section class="agent-console" id="assistant" aria-label="Personal assistant">
         <div class="agent-copy">
-          <p class="eyebrow">Automation agent</p>
-          <h2>Let the dispatch agent run the site</h2>
-          <p>The agent can fill a realistic move request, calculate the quote, reserve a crew, assign dispatch, advance live tracking, and update the operations board.</p>
+          <p class="eyebrow">Personal assistant</p>
+          <h2>A booking assistant that walks customers through every step</h2>
+          <p>The assistant can explain services, fill a sample request, build an estimate, reserve a crew, update live tracking, and hand approved work to dispatch and operations on behalf of Dash K Express.</p>
         </div>
 
         <div class="agent-panel">
+          <div class="assistant-mode" aria-label="Assistant modes">
+            <article>
+              <strong>Customer guide</strong>
+              <span>Walks the client through booking, quote, crew reservation, and tracking.</span>
+            </article>
+            <article>
+              <strong>Company operations</strong>
+              <span>Runs dispatch updates, crew assignment, job status, and operations board changes.</span>
+            </article>
+          </div>
+
           <div class="agent-toolbar">
-            <button class="primary-action" type="button" data-agent-run>Run agent</button>
+            <button class="primary-action" type="button" data-agent-run>Guide customer</button>
+            <button class="ghost-action" type="button" data-agent-ops>Run dispatch ops</button>
             <button class="ghost-action" type="button" data-agent-pause>Pause</button>
             <button class="ghost-action" type="button" data-agent-reset>Reset</button>
           </div>
 
           <div class="agent-status-card">
-            <span class="pulse-dot" aria-hidden="true"></span>
             <div>
-              <strong id="agent-status">Standing by</strong>
-              <p id="agent-detail">Ready to automate a Dash K Express booking.</p>
+              <strong id="agent-status">Assistant ready</strong>
+              <p id="agent-detail">Ready to guide customers or run approved dispatch operations.</p>
             </div>
           </div>
 
           <ol class="agent-steps" id="agent-steps">
-            <li data-step="quote"><span></span>Fill customer request</li>
-            <li data-step="estimate"><span></span>Calculate quote</li>
+            <li data-step="quote"><span></span>Understand request</li>
+            <li data-step="estimate"><span></span>Build estimate</li>
             <li data-step="reserve"><span></span>Reserve crew</li>
-            <li data-step="dispatch"><span></span>Assign nearest truck</li>
-            <li data-step="track"><span></span>Advance tracking</li>
-            <li data-step="ops"><span></span>Update dispatch board</li>
+            <li data-step="dispatch"><span></span>Run dispatch</li>
+            <li data-step="track"><span></span>Update customer tracking</li>
+            <li data-step="ops"><span></span>Update operations board</li>
           </ol>
 
           <div class="agent-log" id="agent-log" aria-live="polite">
-            <p>Agent log will appear here.</p>
+            <p>Assistant conversation and operations log will appear here.</p>
           </div>
         </div>
       </section>
@@ -453,9 +464,9 @@
       <a href="#booking"><span>Book</span></a>
       <a href="#services"><span>Services</span></a>
       <a href="#tracking"><span>Track</span></a>
-      <a href="#agent"><span>Agent</span></a>
+      <a href="#assistant"><span>Help</span></a>
     </nav>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=13"></script>
   </body>
 </html>

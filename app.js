@@ -19,6 +19,7 @@ const agentDetail = document.querySelector("#agent-detail");
 const agentLog = document.querySelector("#agent-log");
 const agentSteps = Array.from(document.querySelectorAll("#agent-steps li"));
 const agentRunButton = document.querySelector("[data-agent-run]");
+const agentOpsButton = document.querySelector("[data-agent-ops]");
 const agentPauseButton = document.querySelector("[data-agent-pause]");
 const agentResetButton = document.querySelector("[data-agent-reset]");
 const crewCards = Array.from(document.querySelectorAll(".crew-card"));
@@ -217,7 +218,7 @@ function logAgent(message) {
   const time = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" });
   entry.textContent = `[${time}] ${message}`;
 
-  if (agentLog.textContent.includes("Agent log will appear here.")) {
+  if (agentLog.textContent.includes("Assistant conversation and operations log will appear here.")) {
     agentLog.textContent = "";
   }
 
@@ -255,7 +256,7 @@ function completeAgentStep(stepName) {
 
 function assertAgentCanContinue(runId) {
   if (runId !== agentRunId || agentPaused) {
-    throw new Error("Agent paused");
+    throw new Error("Assistant paused");
   }
 }
 
@@ -294,10 +295,12 @@ function resetAgent() {
   agentPaused = false;
   agentPanel.classList.remove("running");
   agentRunButton.disabled = false;
-  agentRunButton.textContent = "Run agent";
+  agentRunButton.textContent = "Guide customer";
+  agentOpsButton.disabled = false;
+  agentOpsButton.textContent = "Run dispatch ops";
   agentSteps.forEach((step) => step.classList.remove("active", "done"));
-  agentLog.innerHTML = "<p>Agent log will appear here.</p>";
-  setAgentState("Standing by", "Ready to automate a Dash K Express booking.");
+  agentLog.innerHTML = "<p>Assistant conversation and operations log will appear here.</p>";
+  setAgentState("Assistant ready", "Ready to guide customers or run approved dispatch operations.");
   bookButton.textContent = "Reserve crew";
   bookButton.disabled = false;
   bookButton.style.opacity = "1";
@@ -323,34 +326,35 @@ async function runAgent() {
   agentPaused = false;
   agentPanel.classList.add("running");
   agentRunButton.disabled = true;
-  agentRunButton.textContent = "Running";
+  agentRunButton.textContent = "Guiding";
+  agentOpsButton.disabled = true;
   agentLog.innerHTML = "";
   agentSteps.forEach((step) => step.classList.remove("active", "done"));
 
   try {
-    activateAgentStep("quote", "Collecting job details", "Filling pickup, dropoff, service, distance, and customer notes.");
+    activateAgentStep("quote", "Understanding request", "Guiding the customer through pickup, dropoff, service, distance, and job notes.");
     form.scrollIntoView({ behavior: "smooth", block: "start" });
     fillDemo();
     await agentDelay(runId);
     completeAgentStep("quote");
 
-    activateAgentStep("estimate", "Building quote", "Recalculating price with labor, distance, stairs, protection, and priority dispatch.");
+    activateAgentStep("estimate", "Building estimate", "Explaining the price with labor, distance, stairs, protection, and priority options.");
     estimate();
     await agentDelay(runId);
     completeAgentStep("estimate");
 
-    activateAgentStep("reserve", "Reserving crew", "Locking the customer quote and confirming the crew reservation.");
+    activateAgentStep("reserve", "Reserving crew", "Locking the customer estimate and confirming the crew reservation.");
     reserveCrew();
     await agentDelay(runId);
     completeAgentStep("reserve");
 
-    activateAgentStep("dispatch", "Assigning truck", "Matching Marco Rivera's box truck because it is the closest properly equipped crew.");
+    activateAgentStep("dispatch", "Running dispatch", "Matching Marco Rivera's box truck because it is the closest properly equipped crew.");
     document.querySelector("#teams").scrollIntoView({ behavior: "smooth", block: "start" });
     assignNearestCrew();
     await agentDelay(runId);
     completeAgentStep("dispatch");
 
-    activateAgentStep("track", "Advancing tracking", "Moving the customer timeline from crew assigned to en route, loading, and complete.");
+    activateAgentStep("track", "Updating customer tracking", "Moving the customer timeline from crew assigned to en route, loading, and complete.");
     document.querySelector("#tracking").scrollIntoView({ behavior: "smooth", block: "start" });
     for (let index = 2; index < statusCopy.length; index += 1) {
       setStatus(index);
@@ -359,7 +363,7 @@ async function runAgent() {
     }
     completeAgentStep("track");
 
-    activateAgentStep("ops", "Updating dispatch board", "Marking the active move as crew confirmed and nearly ready for completion.");
+    activateAgentStep("ops", "Updating operations board", "Marking the active move as crew confirmed and nearly ready for completion.");
     document.querySelector("#ops").scrollIntoView({ behavior: "smooth", block: "start" });
     activeJobCard?.classList.add("agent-updated");
     await agentDelay(runId);
@@ -367,16 +371,70 @@ async function runAgent() {
 
     agentSteps.forEach((step) => step.classList.remove("active"));
     agentPanel.classList.remove("running");
-    setAgentState("Automation complete", "The demo booking, tracking, crew assignment, and dispatch board are updated.");
-    logAgent("Agent run complete.");
+    setAgentState("Assistant complete", "The customer booking, tracking, crew assignment, and operations board are updated.");
+    logAgent("Assistant run complete.");
   } catch (error) {
     agentPanel.classList.remove("running");
-    setAgentState("Paused", "Agent run paused. Press Run agent to start a fresh automation.");
-    logAgent("Agent paused before finishing.");
+    setAgentState("Paused", "Assistant paused. Press Guide customer to start a fresh walkthrough.");
+    logAgent("Assistant paused before finishing.");
   } finally {
     if (runId === agentRunId) {
       agentRunButton.disabled = false;
-      agentRunButton.textContent = "Run agent";
+      agentRunButton.textContent = "Guide customer";
+      agentOpsButton.disabled = false;
+      agentOpsButton.textContent = "Run dispatch ops";
+    }
+  }
+}
+
+async function runOperationsAgent() {
+  const runId = agentRunId + 1;
+  agentRunId = runId;
+  agentPaused = false;
+  agentPanel.classList.add("running");
+  agentRunButton.disabled = true;
+  agentOpsButton.disabled = true;
+  agentOpsButton.textContent = "Dispatching";
+  agentLog.innerHTML = "";
+  agentSteps.forEach((step) => step.classList.remove("active", "done"));
+
+  try {
+    activateAgentStep("dispatch", "Running dispatch operations", "Assigning the nearest qualified crew and confirming truck readiness on behalf of Dash K Express.");
+    document.querySelector("#teams").scrollIntoView({ behavior: "smooth", block: "start" });
+    assignNearestCrew();
+    await agentDelay(runId);
+    completeAgentStep("dispatch");
+
+    activateAgentStep("track", "Updating customer tracking", "Sending customer-facing status updates from crew assigned through active job progress.");
+    document.querySelector("#tracking").scrollIntoView({ behavior: "smooth", block: "start" });
+    setStatus(2);
+    logAgent(`Customer status updated to ${statusCopy[2][0]}.`);
+    await agentDelay(runId, 520);
+    setStatus(3);
+    logAgent(`Customer status updated to ${statusCopy[3][0]}.`);
+    await agentDelay(runId, 520);
+    completeAgentStep("track");
+
+    activateAgentStep("ops", "Updating operations board", "Refreshing the active move, crew assignment, progress meter, and internal dispatch notes.");
+    document.querySelector("#ops").scrollIntoView({ behavior: "smooth", block: "start" });
+    activeJobCard?.classList.add("agent-updated");
+    await agentDelay(runId);
+    completeAgentStep("ops");
+
+    agentSteps.forEach((step) => step.classList.remove("active"));
+    agentPanel.classList.remove("running");
+    setAgentState("Operations complete", "Dispatch, customer tracking, and the operations board are updated for the active job.");
+    logAgent("Dispatch operations run complete.");
+  } catch (error) {
+    agentPanel.classList.remove("running");
+    setAgentState("Paused", "Operations run paused. Press Run dispatch ops to start again.");
+    logAgent("Operations run paused before finishing.");
+  } finally {
+    if (runId === agentRunId) {
+      agentRunButton.disabled = false;
+      agentRunButton.textContent = "Guide customer";
+      agentOpsButton.disabled = false;
+      agentOpsButton.textContent = "Run dispatch ops";
     }
   }
 }
@@ -401,14 +459,17 @@ bookButton.addEventListener("click", () => {
 saveDraftButton.addEventListener("click", saveBookingDraft);
 
 agentRunButton.addEventListener("click", runAgent);
+agentOpsButton.addEventListener("click", runOperationsAgent);
 
 agentPauseButton.addEventListener("click", () => {
   agentPaused = true;
   agentRunId += 1;
   agentPanel.classList.remove("running");
   agentRunButton.disabled = false;
-  agentRunButton.textContent = "Run agent";
-  setAgentState("Paused", "Agent run paused by dispatcher.");
+  agentRunButton.textContent = "Guide customer";
+  agentOpsButton.disabled = false;
+  agentOpsButton.textContent = "Run dispatch ops";
+  setAgentState("Paused", "Assistant paused by operations.");
   logAgent("Pause requested.");
 });
 
@@ -416,6 +477,7 @@ agentResetButton.addEventListener("click", resetAgent);
 
 window.DashKAgent = {
   run: runAgent,
+  runOperations: runOperationsAgent,
   pause() {
     agentPauseButton.click();
   },
