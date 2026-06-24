@@ -525,6 +525,7 @@ h3 {
 .services,
 .service-areas,
 .recruiting,
+.platform-section,
 .ops-board {
   padding: clamp(36px, 6vw, 72px) clamp(18px, 4vw, 56px);
 }
@@ -584,27 +585,31 @@ h3 {
 }
 
 .service-grid,
-.area-grid {
+.area-grid,
+.platform-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
 .service-grid article,
-.area-grid article {
+.area-grid article,
+.platform-grid article {
   padding: 20px;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .service-grid article:hover,
-.area-grid article:hover {
+.area-grid article:hover,
+.platform-grid article:hover {
   transform: translateY(-3px);
   border-color: rgba(12, 122, 99, 0.38);
   box-shadow: 0 18px 42px rgba(23, 32, 31, 0.12);
 }
 
 .service-grid span,
-.area-grid span {
+.area-grid span,
+.platform-grid span {
   display: inline-grid;
   place-items: center;
   width: auto;
@@ -619,10 +624,28 @@ h3 {
 }
 
 .service-grid p,
-.area-grid p {
+.area-grid p,
+.platform-grid p {
   margin-bottom: 0;
   color: var(--muted);
   line-height: 1.55;
+}
+
+.platform-section {
+  background:
+    linear-gradient(180deg, #fff 0%, #edf3ef 100%);
+}
+
+.platform-grid article {
+  border: 1px solid rgba(219, 227, 223, 0.92);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--soft-shadow);
+}
+
+.platform-grid span {
+  background: #e8eefb;
+  color: var(--blue);
 }
 
 .service-areas {
@@ -1463,6 +1486,7 @@ footer a {
   .crew-grid,
   .service-grid,
   .area-grid,
+  .platform-grid,
   .hr-layout,
   .ops-columns {
     grid-template-columns: 1fr;

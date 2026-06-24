@@ -1,7 +1,7 @@
 {
   "name": "Dash K Express",
   "short_name": "Dash K",
-  "description": "Moving, delivery, labor, furniture assembly, and removal booking app.",
+  "description": "Independent Dash K Express moving and delivery app powered by MovingOS workflow technology.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -27,14 +27,14 @@
     {
       "name": "Book a Move",
       "short_name": "Book",
-      "description": "Start a Dash K Express moving or delivery request.",
+      "description": "Open Dash K Express booking.",
       "url": "/#booking"
     },
     {
-      "name": "Run Dispatch Agent",
-      "short_name": "Agent",
-      "description": "Open the automation agent.",
-      "url": "/#agent"
+      "name": "Track Job",
+      "short_name": "Track",
+      "description": "Open Dash K Express job tracking.",
+      "url": "/#tracking"
     }
   ]
 }
