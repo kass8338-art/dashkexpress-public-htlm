@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Dash K Express app icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="DKE app icon">
   <rect width="180" height="180" rx="38" fill="#0c7a63"/>
-  <path fill="#ffffff" d="M39 42h25c23 0 40 15 40 38s-17 39-40 39H39V42Zm25 57c10 0 18-7 18-19 0-11-8-18-18-18h-2v37h2Zm48-57h20v29l23-29h23l-28 35 30 42h-24l-19-27-5 6v21h-20V42Z"/>
-  <path fill="#f27b35" d="M30 125h18l11-28h64l14 28h16v25h-14a20 20 0 0 1-39 0H79a20 20 0 0 1-39 0H30v-25Z"/>
+  <path fill="#075f4c" d="M28 129h124v18H28z"/>
+  <path fill="#f27b35" d="M128 113h19v16h-19z"/>
+  <text x="90" y="105" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="900" letter-spacing="0" text-anchor="middle">DKE</text>
 </svg>
