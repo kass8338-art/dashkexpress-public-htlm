@@ -205,16 +205,16 @@ function updateCapitalReadiness() {
 
   if (score >= 82) {
     capitalBand.textContent = "Ready for equipment or truck financing";
-    capitalDetail.textContent = `FasoCapital would flag this operator for up to ${money(starterAdvance * 3)} in asset-backed financing, with repayment tied to verified job flow.`;
+    capitalDetail.textContent = `MovingOS Capital would flag this U.S. moving operator for up to ${money(starterAdvance * 3)} in asset-backed financing, with repayment tied to verified job flow.`;
   } else if (score >= 65) {
     capitalBand.textContent = "Ready for small working-capital advance";
-    capitalDetail.textContent = `FasoCapital would recommend a starter advance around ${money(starterAdvance)} tied to job volume, repayment timing, and completion consistency.`;
+    capitalDetail.textContent = `MovingOS Capital would recommend a starter advance around ${money(starterAdvance)} tied to job volume, repayment timing, and completion consistency.`;
   } else if (score >= 45) {
     capitalBand.textContent = "Build more verified operating history";
-    capitalDetail.textContent = "FasoOS would keep routing jobs, tracking payments, and improving reputation before offering larger capital products.";
+    capitalDetail.textContent = "MovingOS would keep routing jobs, tracking payments, and improving reputation before offering larger capital products.";
   } else {
     capitalBand.textContent = "Registration and reliability first";
-    capitalDetail.textContent = "The operator needs stronger identity, completion, payment, and dispute records before FasoCapital should take balance-sheet risk.";
+    capitalDetail.textContent = "The operator needs stronger identity, completion, payment, and dispute records before MovingOS Capital should take balance-sheet risk.";
   }
 }
 
@@ -245,3 +245,4 @@ capitalDispute?.addEventListener("input", updateCapitalReadiness);
 restoreScenario();
 updateRevenueCalculator();
 updateCapitalReadiness();
+
